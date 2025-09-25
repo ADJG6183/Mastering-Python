@@ -1,0 +1,62 @@
+import time
+import math
+
+def km_to_miles():
+    km = float(input("Enter the kilometers: "))
+    miles = km * 0.621371
+    print(f"{km} kilometers is equal to {miles} miles.")
+    time.sleep(1)
+
+def miles_tokm():
+    miles = float(input("Enter the miles: "))
+    km = miles * 1.60934
+    print(f"The total kilometers is: {km}")
+    time.sleep(1)
+
+def celcius_to_farenheit():
+    Celcius = float(input("Enter the degress in Celcius: "))
+    Farenheit = (Celcius * (9/5) + 32)
+    print(f"({Celcius} degrees in Farenheit is {Farenheit}")
+    time.sleep(1)
+
+def farenheit_to_celcius():
+    Farenheit = float(input("Enter the degrees in Farenheit: "))
+    Celcius = (Farenheit - 32) * (5/9)
+    print(f"{Farenheit} degrees in Celcius is {Celcius}")
+    time.sleep(1)
+
+def loop_trap():
+    for i in range(1000):
+        i += 1
+        print("This is a loop trap. You are stuck here forever unless you quit the program.")
+        time.sleep(1)
+
+if __name__ == "__main__":
+    print("""
+    WELCOME TO MY UNIT CONVERTER. YOU ARE HELPING MASTER PYTHON!!!!
+    Choose an option from those you see here:
+    ########################################        
+    1. Kilometers to Miles
+    2. Miles to Kilometers
+    3. Celsius to Fahrenheit
+    4. Fahrenheit to Celsius
+    5. Quit (Hope to see you again)
+    ########################################
+    """)
+    time.sleep(1)
+    while True:
+        ans = input("What would you like to do? ")
+        if ans == "1":
+            km_to_miles()
+        elif ans == "2":
+            miles_tokm()
+        elif ans == "3":
+            celcius_to_farenheit()
+        elif ans == "4":
+            farenheit_to_celcius()
+        elif ans == "5":
+            print("\n Goodbye")
+            loop_trap()
+        else:
+            print("\n Not Valid Choice Try again")
+            time.sleep(1)   
